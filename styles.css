@@ -45,6 +45,12 @@ main h1 {
     color: rgb(129, 141, 179);
     font-family: arial;
 }
+
+main ul#album li#photo img {
+    width: 400px;
+    
+}
+
 footer {
     height: 40px;
     background-color: rgb(129, 141, 179);
