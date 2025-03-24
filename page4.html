@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>My First Web Page</title>
     <meta charset="utf-8">
@@ -7,47 +8,69 @@
     <!--External CSS Styles-->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Container to wrap everything-->   
+    <!-- Container to wrap everything-->
     <div id="container">
 
         <!-- Brand of website-->
         <header>My Web Site Brand</header>
-<!--Main Navigation-->
-<nav>
+        <!--Main Navigation-->
+        <nav>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="page2.html">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="page3.html">Contact</a></li>
-    </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="page2.html">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="page3.html">Contact</a></li>
+            </ul>
 
-</nav> <!--End Main Navigation-->
+        </nav> <!--End Main Navigation-->
 
-<!--Main Content-->
-<main>
+        <!--Main Content-->
+        <main>
 
-    <h1>My Fourth Heading</h1>
-    <p>My Fourth Paragraph</p>
-    <!--<img src="images/images/central_park.jpg" alt="Central Park Image" width="500">-->
+            <h1>My Fourth Heading</h1>
+            <p>My Fourth Paragraph</p>
+            <!--<img src="images/images/central_park.jpg" alt="Central Park Image" width="500">-->
 
-    <ul id="album">
-        <li id="photo"><img src="images/images/winterland1.jpg"></li>
-        <li id="photo"><img src="images/images/winterland2.jpg"></li>
-        <li id="photo"><img src="images/images/winterland3.jpg"></li>
-        <li id="photo"><img src="images/images/winterland4.jpg"></li>
-        <li id="photo"><img src="images/images/winterland5.jpg"></li>
-        <li id="photo"><img src="images/images/winterland6.jpg"></li>
-    </ul>
+            <ul id="album">
+                <!--<li id="photo"><img src="images/images/winterland1.jpg"></li>
+                <li id="photo"><img src="images/images/winterland2.jpg"></li>
+                <li id="photo"><img src="images/images/winterland3.jpg"></li>
+                <li id="photo"><img src="images/images/winterland4.jpg"></li>
+                <li id="photo"><img src="images/images/winterland5.jpg"></li>
+                <li id="photo"><img src="images/images/winterland6.jpg"></li>-->
+            </ul>
 
-</main> <!--End Main Content-->
+        </main> <!--End Main Content-->
 
-<!--Footer Information-->
-<footer>&copy; Copyright 2025</footer>
+        <!--Footer Information-->
+        <footer>&copy; Copyright 2025</footer>
 
-</div> <!--End Container-->
+    </div> <!--End Container-->
+
+    <!--Gallery Scripts-->
+    <script>
+        var photos = [];
+        var fileNames = [];
+        var imageList = [];
+        var image;
+        var openList = '<li id="photo">';
+        var closeList = '</li>';
+
+        for (var i = 0; i < 6; i++) {
+            fileNames.push("winterland" + (i + 1)); //winterland1, winterland2, etc
+            photos.push('<img src="images/' + fileNames[i] + '.jpg">'); //<img src="images/winterLand1.jpg"
+            image = openList + photos[i] + closeList; //<li id="photo"><img src
+            imageList.push(image);
+        }
+
+        //display all images
+        document.getElementById("album").innerHTML = imageList.join("");
+    </script>
 
 </body>
+
 </html>
