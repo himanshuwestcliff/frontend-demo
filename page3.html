@@ -1,88 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>My Third Web Page</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <!--External CSS Styles-->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Container to wrap everything-->
     <div id="container">
+      <!-- Brand of website-->
+      <header>My Web Site Brand</header>
+      <!--Main Navigation-->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="page2.html">About</a>
+          </li>
+          <li><a href="page4.html">Gallery</a></li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!--End Main Navigation-->
 
-        <!-- Brand of website-->
-        <header>My Web Site Brand</header>
-        <!--Main Navigation-->
-        <nav>
+      <!--Main Content-->
+      <main>
+        <h1>My Third Heading</h1>
+        <p>My Third Paragraph</p>
+        <!--<img src="images/images/central_park.jpg" alt="Central Park Image" width="500">-->
 
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="page2.html">About</a>
-                </li>
-                <li><a href="page4.html">Gallery</a></li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+        <form action="/signup" method="post">
+          <fieldset>
+            <legend>User Personal Informaiton</legend>
 
-        </nav> <!--End Main Navigation-->
+            <label>Enter your full name:</label>
+            <input type="text" name="name" />
 
-        <!--Main Content-->
-        <main>
+            <label>Enter your email:</label>
+            <input type="email" name="email" />
 
-            <h1>My Third Heading</h1>
-            <p>My Third Paragraph</p>
-            <!--<img src="images/images/central_park.jpg" alt="Central Park Image" width="500">-->
+            <label>Enter your phone:</label>
+            <input type="tel" name="phone" />
 
-            <form action="/signup" method="post">
-                <fieldset>
-                    <legend>User Personal Informaiton</legend>
+            <label>Select your gender:</label>
+            <input type="radio" name="gender" value="male" />Male
+            <input type="radio" name="gender" value="female" />Female
 
-                    <label>Enter your full name:</label>
-                    <input type="text" name="name">
+            <label>How should we contact you</label>
+            <select>
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+            </select>
 
-                    <label>Enter your email:</label>
-                    <input type="email" name="email">
+            <label>Tell us the reason for your visit today:</label>
+            <textarea rows="5" cols="30"></textarea>
 
-                    <label>Enter your phone:</label>
-                    <input type="tel" name="phone">
+            <input type="submit" value="Sign up" />
+            <input type="submit" value="Clear" />
+          </fieldset>
+        </form>
+      </main>
+      <!--End Main Content-->
 
-                    <label>Select your gender:</label>
-                    <input type="radio" name="gender" value="male">Male
-                    <input type="radio" name="gender" value="female">Female
-
-                    <label>How should we contact you</label>
-                    <select>
-                        <option value="email">Email</option>
-                        <option value="phone">Phone</option>
-                    </select>
-
-
-                    <label>Tell us the reason for your visit today:</label>
-                    <textarea rows="5" cols="30"></textarea>
-
-
-
-                    <input type="submit" value="Sign up">
-                    <input type="submit" value="Clear">
-
-                </fieldset>
-
-            </form>
-
-        </main> <!--End Main Content-->
-
-        <!--Footer Information-->
-        <footer>&copy; Copyright 2025</footer>
-
-    </div> <!--End Container-->
-
-</body>
-
+      <!--Footer Information-->
+      <footer>&copy; Copyright 2025</footer>
+    </div>
+    <!--End Container-->
+  </body>
 </html>
